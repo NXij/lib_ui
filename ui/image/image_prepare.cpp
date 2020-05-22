@@ -38,7 +38,7 @@ const QImage &circleMask(QSize size) {
 		PainterHighQualityEnabler hq(p);
 		p.setBrush(Qt::white);
 		p.setPen(Qt::NoPen);
-		p.drawEllipse(QRect(QPoint(), size));
+		p.drawRect(QRect(QPoint(), size));
 	}
 	return masks.emplace(key, std::move(mask)).first->second;
 }
